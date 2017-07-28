@@ -1,0 +1,35 @@
+@import 'reset';
+@import 'type';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Silkscreen;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+$blue: #3786e3;
+
+.lwblue {
+  color: $blue;
+}
+
+header {
+  margin: 10px 0;
+  border-bottom: 1px solid $blue;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+footer {
+  margin: 10px 0;
+  border-top: 1px solid $blue;
+  font-size: 10px;
+  padding: 20px 0;
+}
