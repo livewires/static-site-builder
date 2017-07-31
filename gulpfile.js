@@ -97,7 +97,7 @@ function watch() {
   gulp.watch([`${paths.content}/**/*.md`, `${paths.templates}/**`], metal);
 }
 
-const compile = gulp.series(clean, gulp.parallel(style, metal));
+const compile = gulp.series(clean, gulp.parallel(style, img, metal));
 // const linter = gulp.series(sassLinter, jsLinter);
 
 gulp.task('dev', gulp.series(compile, watch));
