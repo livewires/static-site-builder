@@ -52,6 +52,11 @@ function style() {
     .pipe(gulp.dest(`${paths.dest}/assets/`));
 }
 
+function img() {
+  return gulp.src(`${paths.src}/img/**/*`)
+    .pipe(gulp.dest(`${paths.dest}/img`));
+}
+
 function swallowError (error) {
   console.log(error.toString())
   this.emit('end')
@@ -88,6 +93,7 @@ function deploy() {
 function watch() {
   server();
   gulp.watch([`${paths.src}/**/*.scss`], style);
+  gulp.watch([`${paths.src}/img/**/*`], img);
   gulp.watch([`${paths.content}/**/*.md`, `${paths.templates}/**`], metal);
 }
 
